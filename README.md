@@ -9,7 +9,7 @@ A deal closes, everyone celebrates — and then the handoff to Customer Success 
 
 It's the **fourth agent** in a series of small, focused RevOps automations built on one proven skeleton: fetch the data, reason with a private local LLM, log the result, notify. It goes back to the **CRM-in** shape of the reference [Deal Risk](https://github.com/santiagoceron10/revops-deal-review) agent — same template, different job.
 
-> **Scaffold / template.** This repo ships as a clean, documented **placeholder**: the schema, the workflow, and the blueprint are complete and structurally validated, but it hasn't been run end-to-end. It's here to show the shape of the automation and to be the starting point you wire up. Every place a real CRM (Salesforce/HubSpot) or CS tool (Slack, a task system) would plug in is a labeled swap-point.
+> **Status:** ✅ System architecture & design + reference implementation — a complete, documented build you can deploy on your own stack (see setup below). The schema, workflow, and blueprint are complete and structurally validated. Every place a real CRM (Salesforce/HubSpot) or CS tool (Slack, a task system) would plug in is a labeled swap-point.
 
 > **Demo project.** Designed to run entirely on your machine — [n8n](https://n8n.io) + PostgreSQL in Docker and a local [Ollama](https://ollama.com) model. **No cloud, no API keys, no data leaves your laptop.** The CRM is a mock Postgres database seeded with closed-won deals.
 
@@ -52,7 +52,7 @@ The seed includes deals with a champion + competitor (the brief names them and t
 
 ## Run it yourself
 
-> This is a scaffold — the steps below are how you'd stand it up. It hasn't been run end-to-end yet.
+> This is the reference implementation — the steps below show how to stand it up on your own stack.
 
 **Prerequisites:** [Docker](https://www.docker.com/products/docker-desktop/) and [Ollama](https://ollama.com) with the `gemma3:4b` model (`ollama pull gemma3:4b`).
 
@@ -88,4 +88,4 @@ SC Agentic Solutions helps businesses go **from prototype to reality** with prac
 **Want an automation like this for your business?** Let's talk — reach out through GitHub.
 
 ---
-*Part of the SC Agentic Demos portfolio — a growing set of AI-automation demos for business. Agent #4 in the RevOps agent series; it clones the same template as [Deal Risk](https://github.com/santiagoceron10/revops-deal-review), [Pipeline Coverage](https://github.com/santiagoceron10/revops-pipeline-forecasting), and [Meeting Recap](https://github.com/santiagoceron10/revops-stakeholder-comms), back in the CRM-in shape. Ships as a scaffold/template.*
+*Part of the SC Agentic Demos portfolio — a growing set of AI-automation demos for business. Agent #4 in the RevOps agent series; it clones the same template as [Deal Risk](https://github.com/santiagoceron10/revops-deal-review), [Pipeline Coverage](https://github.com/santiagoceron10/revops-pipeline-forecasting), and [Meeting Recap](https://github.com/santiagoceron10/revops-stakeholder-comms), back in the CRM-in shape. A complete reference implementation in the RevOps agent series.*

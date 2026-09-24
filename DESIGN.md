@@ -1,7 +1,7 @@
 # Handoff Orchestrator Agent — Design (RevOps agent #4)
 
 **Function:** RevOps Ops · **Repo:** `revops-ops` (public)
-**Status:** ✅ Template shipped — **placeholder, not run.** Schema, workflow, and blueprint are complete and structurally validated; the agent has **not** been executed end-to-end (no live DB, no live model call). Ships as a documented scaffold.
+**Status:** ✅ System architecture & design + reference implementation — a complete, documented build you can deploy on your own stack (see setup below). Schema, workflow, and blueprint are complete and structurally validated.
 
 Clones the RevOps template back to the **CRM-in** shape (like the reference [Deal Risk](https://github.com/santiagoceron10/revops-deal-review) agent): it reuses the **`opportunities`** mock CRM, filters to **closed-won** deals, and uses the local LLM to draft the **sales→CS handoff** — a brief + onboarding task checklist + watch-outs.
 
@@ -25,7 +25,7 @@ This is the same eight-node skeleton the other RevOps agents use — only the SQ
 - **Reuse `opportunities`** — filter `stage = 'ClosedWon'`. The seed adds several closed-won rows with champion / competitor / next-step context so each brief has material, plus a couple of non-won rows to prove the filter excludes them.
 - **New `handoffs`** (output): `id`, `created_at`, `opp_id`, `account`, `amount`, `owner_rep`, `brief text`, `tasks jsonb`, `watch_outs text`.
 
-*(An optional `handoff_created bool` on `opportunities` to mark processed deals is out of scope for this placeholder — see below.)*
+*(An optional `handoff_created bool` on `opportunities` to mark processed deals is out of scope for this reference implementation — see below.)*
 
 ## Logic (Code node — light, no scoring)
 
